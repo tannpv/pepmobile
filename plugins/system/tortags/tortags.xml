@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.6" type="plugin" group="system">
+	<name>System - TorTags</name>
+	<author>Tormix</author>
+	<creationDate>October 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@tormix.com</authorEmail>
+	<authorUrl>www.tormix.com</authorUrl>
+	<version>1.0</version>
+	<description>System plugin: TorTags insert tag buttons</description>
+	<files>
+		<filename plugin="tortags">tortags.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<params>
+	</params>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_tortags.ini</language>
+	</languages>
+</install>

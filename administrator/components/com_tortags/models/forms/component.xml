@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addfieldpath="/administrator/components/com_tortags/models/fields"
+>
+	<fieldset
+		name="details"
+		label="COM_TORTAGS_COMPONENT_FIELDSET_DETAILS"
+	>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="component"
+			type="text"
+			label="COM_TORTAGS_COMPONENT"
+			description="COM_TORTAGS_COMPONENT_DESC"
+			size="40"
+			class="inputbox"
+			required="true"
+			default="com_"
+		/>
+		
+		<field
+			name="table"
+			type="text"
+			label="COM_TORTAGS_COMPONENT_FIELD_TABLE"
+			description="COM_TORTAGS_COMPONENT_FIELD_TABLE_DESC"
+			size="40"
+			class="inputbox"
+			required="true"
+			default="#__"
+		/>
+		<field
+			name="title_field"
+			type="text"
+			label="COM_TORTAGS_COMPONENT_FIELD_TITLE"
+			description="COM_TORTAGS_COMPONENT_FIELD_TITLE_DESC"
+			size="30"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="description_field"
+			type="text"
+			label="COM_TORTAGS_COMPONENT_FIELD_DESCRIPTION"
+			description="COM_TORTAGS_COMPONENT_FIELD_DESCRIPTION_DESC"
+			size="30"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="created_field"
+			type="text"
+			label="COM_TORTAGS_COMPONENT_FIELD_CREATED"
+			description="COM_TORTAGS_COMPONENT_FIELD_CREATED_DESC"
+			size="30"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="url_template"
+			type="text"
+			label="COM_TORTAGS_COMPONENT_URL"
+			description="COM_TORTAGS_COMPONENT_URL_DESC"
+			size="70"
+			class="inputbox"
+			required="true"
+			default="index.php?option=[COMPONENT]&amp;view=myview&amp;id=[ID]"
+		/>
+		
+	</fieldset>
+</form>
+

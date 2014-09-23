@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @version		$Id: helper.php 14401 2010-01-26 14:10:00Z louis $
+ * @package		Joomla
+ * @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
+ * @license		GNU/GPL, see LICENSE.php
+ * Joomla! is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * See COPYRIGHT.php for copyright notices and details.
+ */
+// no direct access
+defined('_JEXEC') or die('Restricted access');
+
+require_once (JPATH_SITE . DS . 'components' . DS . 'com_content' . DS . 'helpers' . DS . 'route.php');
+//require_once (JPATH_SITE . DS . 'simpleresizeimage.php');
+
+class modWallfacebookHelper{
+
+    function getList($artid) {
+    }
+    function loadFB($fbID,$tokenauthen,$limit){
+    $url="https://graph.facebook.com/".$fbID."/feed?limit=".$limit."&access_token=".$tokenauthen;
+    //load and setup CURL
+     $c = curl_init($url);	
+     curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+    //get data from facebook and decode JSON
+     $page = json_decode(curl_exec($c));
+	
+// var_dump( $url);exit;
+    //close the connection
+     curl_close($c);
+    //return the data as an object
+     return $page->data;
+	}
+
+	
+	
+
+}

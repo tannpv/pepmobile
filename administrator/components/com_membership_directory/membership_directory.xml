@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="XXX_COM_VERSION_XXX" method="upgrade">
+    <name>com_membership_directory</name>
+    <creationDate>2013-06-17</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Joomla Component</author>
+    <authorEmail>Joomla@Joomla.com</authorEmail>
+    <authorUrl>http://www.joomla.org</authorUrl>
+    <version>1.0.0</version>
+    <description>show info of membership.</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>membership_directory.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        
+			<language tag="en-GB">language/en-GB.com_membership_directory.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_membership_directory/assets/images/s_com_membership_directory.png" >COM_MEMBERSHIP_DIRECTORY</menu>
+        <submenu>          
+			<menu link="option=com_membership_directory&amp;view=directorys" view="directorys" img="components/com_membership_directory/assets/images/s_directorys.png" alt="Membership_directory/Directorys">COM_MEMBERSHIP_DIRECTORY_TITLE_DIRECTORYS</menu>
+			<menu link="option=com_membership_directory&amp;view=import" view="import" img="components/com_membership_directory/assets/images/" alt="Membership_directory/Import">COM_MEMBERSHIP_DIRECTORY_TITLE_IMPORT</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>membership_directory.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB.com_membership_directory.ini</language>
+			<language tag="en-GB">language/en-GB.com_membership_directory.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

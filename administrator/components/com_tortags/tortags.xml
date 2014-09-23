@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>com_tortags</name>
+	<creationDate>October 2011</creationDate>
+	<author>Tormix Team</author>
+	<authorEmail>suppot@tormix.com</authorEmail>
+	<authorUrl>http://tormixcom</authorUrl>
+	<copyright>Copyright 2010 - 2011. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>COM_TORTAGS_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>tortags.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+	
+	<media destination="com_tortags" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	
+	<administration>
+		<menu img="../media/com_tortags/images/tormix-16.png" alt="Tortags">COM_TORTAGS_MENU</menu>
+		<submenu>
+			<menu link="option=com_tortags&amp;view=components" alt="Components" img="/administrator/components/com_tortags/assets/images/components.png" >COM_TORTAGS_MENU_COMOPONENTS</menu>
+			<menu link="option=com_tortags&amp;view=tags" alt="Tags" img="/administrator/components/com_tortags/assets/images/tags.png" >COM_TORTAGS_MENU_TAGS</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>changelog.txt</filename>
+			<filename>tortags.php</filename>
+			<filename>controller.php</filename>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>assets</folder>
+		</files>
+ 
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_tortags.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_tortags.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

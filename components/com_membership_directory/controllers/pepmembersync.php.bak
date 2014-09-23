@@ -1,0 +1,149 @@
+<?php
+
+// No direct access.
+defined('_JEXEC') or die;
+
+require_once JPATH_COMPONENT.'/controller.php';
+
+/**
+ * Inalphaorders list controller class.
+ */
+class Membership_directoryControllerPepmembersync extends Membership_directoryController
+{
+	public function syncusr(){	
+
+	$token=trim(JRequest::getVar('synctoken','',array()));
+	
+	$fullname=trim(JRequest::getVar('syncname','',array()));
+	if($fullname==""){
+	  $fullname="none";
+	}
+	$username=strtolower ( trim(JRequest::getVar('syncusr','',array())));
+	$password="PEPMthirteen";
+	$email=trim(JRequest::getVar('syncemail','',array()));
+        $memid=trim(JRequest::getVar('syncid','',array()));
+        
+	if($token=="syncc"){
+	 $id=$this->addJoomlaUsers($fullname,$username,$password,$email,$memid);
+    }
+	else{
+	  die();
+	}
+	}
+	public function addJoomlaUsers($name, $username, $password, $email, $memid) {
+      jimport('joomla.user.helper');
+      $salt   = JUserHelper::genRandomPassword(32);
+      $crypted  = JUserHelper::getCryptedPassword($password, $salt);
+      $cpassword = $crypted.':'.$salt;
+
+      $data = array(
+          "name"=>$name,
+          "username"=>$username,
+          "password"=>$password,
+          "password2"=>$password,
+          "email"=>$email,
+          "membership_id"=>$memid,
+          "block"=>0,
+          "groups"=>array("14")
+      );
+
+      $user = new JUser;
+      //Write to database
+      if(!$user->bind($data)) {
+          throw new Exception("Could not bind data. Error: " . $user->getError());
+          return false;
+      }
+      if (!$user->save()) {
+         /// throw new Exception("Could not save user. Error: " . $user->getError());
+         JError::raiseWarning("Could not save user. Error: ", $user->getError());
+           
+          return false;
+      }
+
+    return $user->id;
+  }
+  public function syncusrupdate(){
+
+    $token=JRequest::getVar('synctoken','',array());
+	  
+	$getemail=trim(JRequest::getVar('getemail','',array()));
+	$db=JFactory::getDbo();
+    $query=$db->getQuery(true);
+    $query->select('id');
+    $query->from('#__users');
+    $query->where('`email` ="'.$getemail.'"');
+    $db->setQuery($query);
+    $userId= $db->loadResult(); 
+    if($userId <= 0){
+	$new=1;
+	}
+	else{
+	$new=2;
+	}
+	$fullname=trim(JRequest::getVar('syncname','',array()));
+	if($fullname==""){
+	  $fullname="none";
+	}
+	$username=strtolower ( JRequest::getVar('syncusr','',array()));
+	$email=JRequest::getVar('syncemail','',array());
+	$memid=trim(JRequest::getVar('syncid','',array()));
+ 
+	if($token=="syncc"){	
+			if($new==1){
+			 $password="PEPMthirteen";
+             $this->addJoomlaUsers($fullname,$username,$password,$email);
+			}
+			else{
+			   $this->updateJoomlaUsers($userId,$fullname,$username,$email,$memid);
+			}
+		}
+	else{
+	  die();
+	
+	}
+}
+  public function updateJoomlaUsers($userId,$name, $username, $email, $memid) {
+  	
+	jimport('joomla.user.helper');     
+	    $user = & JFactory::getUser($userId); 
+	    $user->name =$name;
+		$user->username =$username;
+	    $user->email=$email;
+		$user->membership_id=$memid;
+       	
+	if(!$user->save()){
+	JError::raiseError(500,$user->getError() ); // Save or show error if failed
+	}
+   
+  }
+   public function syncusrdel(){
+    $token=JRequest::getVar('synctoken','',array());
+   $getemail=trim(JRequest::getVar('getemail','',array()));
+   
+	$db=JFactory::getDbo();
+    $query=$db->getQuery(true);
+    $query->select('id');
+    $query->from('#__users');
+    $query->where('`email` ="'.$getemail.'"');
+    $db->setQuery($query);
+    $userId= $db->loadResult();
+	
+		if($token=="synccc"){	
+			if($userId > 0){
+				 jimport('joomla.user.helper');
+				 $id=$userId;
+				  $user = new JUser( (int) $id);
+				  $data=array("id"=>$id);
+				  $user->bind($data);
+				  $user->delete();
+				
+				}
+		   }
+			else{
+			  die();
+			}
+   }
+  
+  
+  
+}

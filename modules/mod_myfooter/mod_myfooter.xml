@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Module Myfooter</name>
+	
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>2.5</version>
+	<description>Config Footer</description>
+	<files>
+		<filename module="mod_myfooter">mod_myfooter.php</filename>
+		<folder>tmpl</folder>
+	    <filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_myfooter.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+			   <field type="spacer" name="&lt;div style=&quot;color:#fff; font-size:12px; font-weight:bold; padding:3px; margin:0; text-align:center; background:#333333;&quot;&gt;Settings&lt;/div&gt;" />
+				<field name="Falink" type="text" default="" label="Facebook URL Link" description="Facebook URL Link" size="50" />
+				<field name="Lilink" type="text" default="" label="LinkedIn URL Link" description="LinkedIn URL Link" size="50" />
+				<field name="Address" type="text" default="" label="Address" description="Address On Footer" size="50" />
+				<field name="Tel" type="text" default="" label="Tel" description="Your Number tel" size="15" />
+				<field name="Mail" type="text" default="" label="Mail" description="Your Mail" size="50" />
+			</fieldset>	
+		</fields>
+	</config>
+</install>

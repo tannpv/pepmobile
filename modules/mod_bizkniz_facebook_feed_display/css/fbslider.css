@@ -1,0 +1,128 @@
+  
+
+#fbtbTab {
+
+  position: fixed;
+
+
+  top: 50px;
+
+  z-index: 99999;
+
+}
+
+/** the horizontal tab content **/
+
+
+
+#fbtbTab .fbtbTabContent {
+
+
+/*height:400px;*/
+
+
+
+
+
+}
+
+/** the horizontal tab handle **/
+
+
+
+#fbtbTab .fbtbTabHandle {
+
+  float: left;
+
+  width: 46px;
+
+  height: 108px;
+
+  margin-left: 5px;
+
+
+  padding-top: 15px;
+
+  padding-left: 15px;
+
+  background: url("../images/button_left.png") no-repeat scroll 0 0 transparent;
+
+}
+
+/** the horizontal tab handle close link **/
+
+
+
+#fbtbTab a.open, #fbtbTab .fbtbTabHandle a.close {
+
+  height: 108px;
+
+  line-height: 20px !important;
+
+  padding-left: 30px !important;
+
+  cursor: pointer;
+
+  display: block;
+
+  color: #FFF;
+
+  text-decoration: none;
+
+  font-weight: bold;
+ 
+
+
+}
+
+
+
+
+/** the horizontal tab handle close link opened background
+
+
+
+#fbtbTab .fbtbTabHandle a.open {
+
+  background-image: url(../images/bt_open.png);
+
+  background-repeat: no-repeat;
+
+  background-position: left 0px;
+
+}
+
+
+
+
+
+#fbtbTab .fbtbTabHandle a.close {
+
+  background-image: url(../images/bt_close.png);
+
+  background-repeat: no-repeat;
+
+  background-position: left 0px;
+
+}**/
+
+
+
+#fbtbTab .fbtbTabContent {
+
+  border-bottom-right-radius: 6px;
+
+  border-top-right-radius: 6px;
+
+
+
+}
+
+/** the horizontal tab handle close link opened hover background **/
+
+#fbtbTab .fbtbTabHandle a:hover.open {
+
+}
+
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Thank You" option="View">
+        <message>
+                      <![CDATA[COM_PAYMENT_TITLE_LIST_VIEW_PAYMENT1S_DESC]]>
+        </message>
+    </layout>
+</metadata>

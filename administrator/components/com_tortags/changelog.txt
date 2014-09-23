@@ -1,0 +1,10 @@
+Changelog:
+------------
+This is a changelog for Tortags Component
+------- 1.0.0 -- [November-2011] -------
++ new tortags module
++ options(search plugin)
+
+------ 1.0.0 Released -- [October-2011] -----
+- Relise first version
+ # Released.

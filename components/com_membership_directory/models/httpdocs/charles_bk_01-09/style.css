@@ -1,0 +1,25 @@
+body{	text-align:center;
+		margin:auto;
+               background-color:black;
+}
+
+a, a:hover, a:visited, a:active, a:link,p{
+               color: #BFAF71;
+}
+
+ul{		
+		list-style:none;
+		text-align:center;
+		margin:auto;
+}
+
+.list_links_horiz li{
+		display:inline;
+		margin:auto;
+	
+}
+
+.list_vert{
+		width:240px;
+		
+}

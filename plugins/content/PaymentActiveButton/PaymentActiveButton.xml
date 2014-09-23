@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension  version="2.5" type="plugin" group="content" >
+        <name>Manager Payment Active Button </name>
+        <author>Phi Ho</author>
+        <creationDate>September 19th, 2013</creationDate>
+      
+        <license>GNU General Public License</license>
+       
+        <authorUrl>http://www.epipdev.com</authorUrl>
+        <version>1.0</version>
+        <description>Active/inative Payment Button Buy </description>
+        <files>
+                <filename plugin="PaymentActiveButton">PaymentActivebutton.php</filename>
+                <filename>index.html</filename>
+        </files>
+        <config>
+                <fields name="params">
+                        <fieldset name="basic">
+                               
+                                <field name="payment_golf" type="radio" default="0" label="Golf Payment Status:" description="Set active or inactive for button Buy">
+                                    <option value="0">Inactive</option>
+                                    <option value="1">Active</option>
+                                </field>
+                                <field name="payment_breakfast" type="radio" default="0" label="Breakfast Payment Status:" description="Set active or inactive for button Buy">
+                                    <option value="0">Inactive</option>
+                                    <option value="1">Active</option>
+                                </field>
+                                 <field name="payment_Reverse" type="radio" default="0" label="Reverse Trade Show Payment Status:" description="Set active or inactive for button Buy">
+                                    <option value="0">Inactive</option>
+                                    <option value="1">Active</option>
+                                </field>
+                        </fieldset>
+                </fields>
+        </config>
+</extension >

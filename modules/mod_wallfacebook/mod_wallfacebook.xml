@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Wall Facebook</name>
+	
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>2.5</version>
+	<description>Get content Wall Facebook</description>
+	<files>
+		<filename module="mod_wallfacebook">mod_wallfacebook.php</filename>
+		<folder>tmpl</folder>
+	    <filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_wallfacebook.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="tokenauthen" size="115" type="text" default="" label="Tokenauthen:" description="Get Tokenauthen"  />
+				<field name="app_id" size="50" type="text" default="" label="Application ID:" description="Application ID"/>
+				<field name="app_secret" size="50" type="text" default="" label="Application Secrect:" description="Application Secrect"/>
+                                <field name="fbid" size="50" type="text" default="" label="Acount ID:" description="Account ID"/>
+                               
+				<field name="limit" type="text" default="" label="Limit Post:" description="Limit Post"/>
+			</fieldset>	
+		</fields>
+	</config>
+</install>

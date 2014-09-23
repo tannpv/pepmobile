@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Board Of Directors" option="View">
+        <message>
+                        <![CDATA[Board Of Director]]>
+        </message>
+    </layout>
+    <fields name="params">
+			<fieldset name="basic">
+				<field name="idart"  type="text" default="" label="ID Article" description="Input id article"  />
+				
+			</fieldset>	
+  </fields>
+</metadata>

@@ -1,0 +1,24 @@
+.inputbox{
+    height:20px !important;
+    
+}
+.invalid {
+    border-radius: 0px 0px 0px 0px !important;
+    
+}
+
+input.required {
+    background-color: #FFFFFF;
+    width: 333px !important;
+}
+input:focus, select:focus, textarea:focus {
+    background-color: #FFFFDD !important;
+}
+.inputbox_mess{
+    display: none;
+    float: left;
+    margin: 5px 5px 5px 0;
+    width: auto;
+   
+}
+span.error{display:block; color:red}

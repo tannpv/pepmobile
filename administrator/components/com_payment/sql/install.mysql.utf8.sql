@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `#__payment` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+`first_name` VARCHAR(20)  NOT NULL ,
+`last_name` VARCHAR(20)  NOT NULL ,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT COLLATE=utf8_general_ci;
+

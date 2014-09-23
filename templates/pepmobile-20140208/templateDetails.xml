@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="template">
+        <name>PepMobile</name>
+        <creationDate>06-20-2013</creationDate>
+        <author>Dai Ngo</author>
+        <authorEmail>quocdai@yahoo.com</authorEmail>
+        <authorUrl>http://www.daingo.com</authorUrl>
+        <copyright>Dai Ngo 2013</copyright>
+        <license>GNU/GPL</license>
+        <version>2.5.0</version>
+        <description>template PepMobile</description>
+        <files>
+				<filename>index.html</filename>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>images</folder>
+                <folder>css</folder>
+                <folder>js</folder>
+        </files>
+		 <positions>
+                <position>menutop</position>
+                <position>col_left</position>
+                <position>col_right</position>
+                <position>bottom</position>
+                <position>banner</position>
+                <position>logo</position>
+                <position>content01</position>
+				<position>content02</position>
+				<position>content03</position>
+                <position>top_like</position>
+                <position>footer</position>
+        </positions>
+</extension>

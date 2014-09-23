@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form >
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="first_name"
+			type="text"
+			label="First Name"
+			description="Please enter First Name"
+			size="80"
+			class="inputbox "
+		
+			required="true"
+			default=""
+		/>
+        	<field
+			name="last_name"
+			type="text"
+			label="Last Name"
+			description="Please enter Last Name"
+			size="80"
+			class="inputbox "
+			required="true"
+			default=""
+		/>
+        <field
+			name="user"
+			type="text"
+			label="User Name"
+			description="Please enter User Name"
+			size="80"
+			class="inputbox "
+  	        required="true"
+			default=""
+		/>
+         <field
+			name="password"
+			type="password"
+     		label="Password"
+			description="Please enter Pass word"
+			size="80"
+			class="inputbox "
+		
+		/>
+	    	<field
+			name="company_name"
+			type="text"
+			label="Company Name"
+			description="Please enter Company Name"
+			size="80"
+			class="inputbox "
+		
+			required="true"
+			
+		/>	<field
+			name="email"
+			type="email"
+			label="Email"
+			description="Please enter email"
+			size="80"
+			class="inputbox validate-email"
+		    required="true"
+	     
+            validate="email"
+			default=""
+		/>
+	</fieldset>
+</form>

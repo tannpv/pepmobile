@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_myjspace">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="user.config" title="COM_MYJSPACE_TITLECONFIG" description="COM_MYJSPACE_TITLECONFIG" />
+		<action name="user.delete" title="COM_MYJSPACE_TITLEDELETE" description="COM_MYJSPACE_TITLEDELETE" />
+		<action name="user.edit" title="COM_MYJSPACE_TITLEEDIT" description="COM_MYJSPACE_TITLEEDIT" />
+		<action name="user.myjspace" title="COM_MYJSPACE_TITLE" description="COM_MYJSPACE_TITLE" />
+		<action name="user.search" title="COM_MYJSPACE_TITLESEARCH" description="COM_MYJSPACE_TITLESEARCH" />
+		<action name="user.see" title="COM_MYJSPACE_TITLESEE" description="COM_MYJSPACE_TITLESEE" />
+	</section>
+</access>

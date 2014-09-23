@@ -1,0 +1,77 @@
+/* Link Styles */
+a:link {
+	color: #d3b88f;
+	border: none;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #d3b88f;
+	border: none; 
+	text-decoration: underline;
+}
+
+a:active {
+	color: #FFFFFF; 
+	border: none;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FFFFFF; 
+	border: none;
+	text-decoration: underline;
+}
+
+div, body, td {
+    background-color: #000000;
+	font-family: Tahoma;
+	font-size: 13px;
+	color: #bfaf71;
+	scrollbar-base-color: #3a2a17;
+	scrollbar-arrow-color: #d3b88f;
+	scrollbar-shadow-color: #000000;
+	scrollbar-highlight-color: #c2ab99;
+	scrollbar-darkshadow-color: #3a2a17;
+	scrollbar-track-color: #000000;
+	scrollbar-face-color: #4e3e2c;
+}
+
+#CLight02 {
+border: 0px;
+font-family: Tahoma;
+font-size: 10px;
+color: #bfaf71;
+}
+
+#CLight03 {
+border: 0px solid #d3b88f;
+width: 796px;
+}
+
+#detail {
+border: 1px cc9966 dotted;
+}
+.banner_header{
+  position:absolute;
+
+}
+.headertxt {
+font-family: Tahoma;
+font-size: 22px;
+font-weight: bold;
+color: #FFFFFF;
+border: none;
+text-decoration: none;
+}
+
+.specialList{
+border-bottom: thin dashed #BFAF71;
+}
+.specialRow{
+cursor: pointer;
+}
+.specialtxt{
+color: #FFEC8B;
+font-weight: bold;
+}

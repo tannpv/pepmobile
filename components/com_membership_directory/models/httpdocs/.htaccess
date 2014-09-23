@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^(www.)?orders.charlestonlighting.com [NC]
+#RewriteRule ^(.*)$ http://charlestonlighting.com/dotproject$1 [R=301,L]
+#RewriteRule ^(.*)$ http://charlestonlighting.com/$1 [R=301,L]

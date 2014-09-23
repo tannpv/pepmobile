@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="usermem">
+
+		<field name="id" type="text" default="0"
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_ID" readonly="true"
+			class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+<!--		<field name="uptodate" type="text" default="1" label="Flag"
+			readonly="true" class="readonly" description="Uptodate" />-->
+
+		<field name="size_of_company" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_SIZE_OF_COMPANY"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_SIZE_OF_COMPANY"
+
+
+
+			filter="safehtml" />
+
+		<field name="year_joined" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_YEAR_JOINED"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_YEAR_JOINED"
+
+
+
+			filter="safehtml" />
+
+		<field name="dues_2014" type="text" class="inputbox" size="40"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_DUES_2014"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_DUES_2014"
+			filter="safehtml" />
+
+		<field name="dues_2013" type="text" class="inputbox" size="40"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_DUES_2013"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_DUES_2013"
+			filter="safehtml" />
+
+		<field name="desingated_rep" type="checkbox" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_DESINGATED_REP"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_DESINGATED_REP"
+			value="True" />
+
+		<field name="new_2013" type="checkbox" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_NEW_2013"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_NEW_2013"
+			value="True" />
+
+		<field name="new_2014" type="checkbox" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_NEW_2014"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_NEW_2014"
+			 value="True" />
+
+		<field name="term_expires" type="calendar" class="inputbox"
+
+
+			default="0000-00-00" label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_TERM_EXPIRES"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_TERM_EXPIRES"
+			filter="safehtml" />
+
+		<field name="board_position" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_BOARD_POSITION"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_BOARD_POSITION"
+
+
+
+			filter="safehtml" />
+
+		<field name="business_category" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_BUSINESS_CATEGORY"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_BUSINESS_CATEGORY"
+
+
+
+			filter="safehtml" />
+
+		<field name="paid_2013" type="checkbox" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_PAID_2013"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_PAID_2013"
+
+			filter="safehtml" value="True" />
+
+		<field name="business_directory" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_BUSINESS_DIRECTORY"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_BUSINESS_DIRECTORY"
+
+
+
+			filter="safehtml" />
+
+		<field name="company" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_COMPANY"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_COMPANY"
+
+
+
+			filter="safehtml" />
+
+		<field name="address" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_ADDRESS"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_ADDRESS"
+
+
+
+			filter="safehtml" />
+
+		<field name="city_state_zip" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_CITY_STATE_ZIP"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_CITY_STATE_ZIP"
+
+
+
+			filter="safehtml" />
+
+		<field name="first_name" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_FIRST_NAME"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_FIRST_NAME"
+
+
+
+			filter="safehtml" />
+
+		<field name="last_name" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_LAST_NAME"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_LAST_NAME"
+
+
+
+			filter="safehtml" />
+
+		<field name="job_title" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_JOB_TITLE"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_JOB_TITLE"
+
+
+
+			filter="safehtml" />
+
+		<field name="email" type="text" size="40" class="validate-email"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_EMAIL"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_EMAIL"
+
+			validate="email" filter="safehtml" />
+
+		<field name="website" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_WEBSITE"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_WEBSITE"
+
+			filter="safehtml" />
+
+		<field name="phone" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_PHONE"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_PHONE"
+
+			filter="safehtml" />
+
+		<field name="cell" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_CELL" description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_CELL"
+
+			 filter="safehtml" />
+
+		<field name="fax" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_FAX" description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_FAX"
+
+			 filter="safehtml" />
+
+		<field name="contact" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_CONTACT"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_CONTACT"
+			filter="safehtml" />
+
+		<field name="ap_email" type="text" size="40"  
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_AP_EMAIL"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_AP_EMAIL"
+
+			validate="email" filter="safehtml" />
+
+		<field name="description" type="textarea" buttons="true" rows="7"
+			class="inputbox" filter="safehtml"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_DESCRIPTION"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_DESCRIPTION" />
+
+		<field name="referred_by" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_REFERRED_BY"
+			description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_REFERRED_BY"
+			filter="safehtml" />
+
+		<field name="pass" type="text" size="40" class="inputbox"
+
+			label="COM_MEMBERSHIP_DIRECTORY_FORM_LBL_DIRECTORY_PASS" description="COM_MEMBERSHIP_DIRECTORY_FORM_DESC_DIRECTORY_PASS"
+
+
+
+			filter="safehtml" />
+
+		<field name="groups" type="hidden" />
+
+	</fieldset>
+
+</form>

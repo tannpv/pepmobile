@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+    <name>mod_menu_left</name>
+    <author>Vu cao</author>
+    <version>2.5.4</version>
+    <description>Show.</description>
+    <files>
+        <filename module="mod_menu_left">mod_menu_left.php</filename>
+        <filename>mod_menu_left.xml</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+<!--    <config>
+        <fields name="params">
+       
+            	<fieldset name="request"
+			addfieldpath="/administrator/components/com_content/models/fields" label="Select or Change article">
+
+			<field name="article_id" type="modal_article"
+				label="Select Article"
+				required="true"
+				description="jkdfd"
+			/>
+		</fieldset>
+        </fields>
+    </config>-->
+</extension>

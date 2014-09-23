@@ -1,0 +1,130 @@
+string(3437) "<div id="dvContainer">
+    <fieldset id="order">
+
+        <legend><h3>Detail</h3></legend>
+        <p><strong>Order Information </strong></p>
+        <br/>
+        <p>Customer</p>
+        <hr/>
+        <table width="100%">
+            <tr>
+                <td width="60%">First Name:</td>
+                <td>tan</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>nguyen</td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>epiphany</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>416/11/14 Duong Quang Ham</td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>907718498</td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>Ho Chi Minh</td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td>70000</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>tannpv@gmail.com</td>
+            </tr>
+        </table>
+        <br/>
+        <p>Order</p>
+        <hr/>
+        <table width="100%">
+            <tr>
+                <td width="60%">Order Number:</td>
+                <td>139</td>
+            </tr>
+            <tr>
+                <td width="60%">Order Date:</td>
+                <td>08/05/14</td>
+            </tr>
+          
+
+            <tr>
+                <td width="60%">Transaction Number:</td>
+                <td>2217338607</td>
+            </tr>
+
+            <tr>
+                <td width="60%">Transaction Date:</td>
+                <td>08/05/14</td>
+            </tr>
+                         <tr>
+                <td width="60%">Category:</td>
+                <td>Reverse Trade</td>
+            </tr>
+            <tr>
+                <td>Number Of Member:</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>Total:</td>
+                <td>$125.00</td>
+            </tr>
+        </table>
+        <br/>
+        Payment
+        <hr/>
+        <table width="100%">
+            <tr>
+                <td width="60%">Payment Status:</td>
+                <td>Paid</td>
+            </tr>
+            
+
+            <tr>
+                <td width="60%">CC Number:</td>
+                <td>***********0005</td>
+            </tr>
+            <tr>
+                <td width="60%">CC Type:</td>
+                <td>American Express</td>
+            </tr>
+                    </table>
+        <br/>
+        <br/>
+        <p>Members </p>
+        <hr/>
+
+        <table width="100%">
+            <tr>
+                <td width="60%"><strong>Name</strong></td>
+                <td><strong>Company</strong></td>
+            </tr>
+                             <tr> 
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+        </table>
+        <br/>
+        <br/>
+        <p>Non Member</p>
+        <hr/>
+        <table width="100%">
+            <tr>
+                <td width ="60%"><strong>Name</strong></td>
+                <td><strong>Company</strong></td>
+            </tr>
+                            <tr> 
+                    <td>tan</td>
+                    <td>nguyen</td>
+                </tr>
+                    </table>
+    </fieldset>
+</div>"

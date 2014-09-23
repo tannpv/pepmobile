@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension	type="module"	version="1.6.0"	client="site"	method="upgrade">
+	<name>mod_tortags</name>
+	<creationDate>October 2011</creationDate>
+	<author>Tormix Team</author>
+	<authorEmail>suppot@tormix.com</authorEmail>
+	<authorUrl>http://tormixcom</authorUrl>
+	<copyright>Copyright 2010 - 2011. All rights reserved</copyright>
+	<license>GNU</license>
+	<version>1.0.0</version>
+	<description>TorTags module</description>
+	<files>
+	<filename module="mod_tortags">mod_tortags.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_tortags.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tortags.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_tortags.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			<field name="limitags" type="text"
+					default="20"
+					label="Count tags"
+					description="Please enter a count of tags to display or set 0 when you want show all tags in this module"
+					size="5"
+				/>
+			</fieldset>			
+		</fields>
+	</config>
+</extension>

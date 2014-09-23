@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Editor Button - MyJspace Tags</name>
+	<creationDate>29/03/2012</creationDate>
+	<author>Bernard Saulme</author>
+	<authorEmail>bernard@wanadoo.fr</authorEmail>
+	<authorUrl>http://bsaulme.pagesperso-orange.fr/</authorUrl>
+	<copyright>Version by Bernard Saulme</copyright>
+	<license>GNU/GPL</license>
+	<version>1.7.7</version>
+	<build>4</build>
+	
+	<description>Editor buttons to insert BS MyJspace tags</description>
+
+	<scriptfile>install.php</scriptfile>
+	
+	<files>
+		<filename plugin="tagsmyjspace">tagsmyjspace.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="fr-FR">languages/fr-FR.plg_editors-xtd_tagsmyjspace.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_editors-xtd_tagsmyjspace.ini</language>
+		<language tag="fr-FR">languages/fr-FR.plg_editors-xtd_tagsmyjspace.sys.ini</language>
+		<language tag="en-GB">languages/en-GB.plg_editors-xtd_tagsmyjspace.sys.ini</language>
+	</languages>
+	
+	<params>
+		<param name="enabled_css" type="list" default="1" label="PLG_EDITORSXTD_TAGSMYJSPACE_ENABLE_CSS_LABEL" description="PLG_EDITORSXTD_TAGSMYJSPACE_ENABLE_CSS_DESC">
+			<option value="0">NO</option>
+			<option value="1">YES</option>
+		</param>
+	</params>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enabled_css" type="list" default="1" label="PLG_EDITORSXTD_TAGSMYJSPACE_ENABLE_CSS_LABEL" description="PLG_EDITORSXTD_TAGSMYJSPACE_ENABLE_CSS_DESC">
+					<option value="0">NO</option>
+					<option value="1">YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+</install>

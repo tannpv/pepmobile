@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>System - Core Login Redirect</name>
+	<author>Joomladds @ River Media</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) 2013 River Media. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomladds.com</authorEmail>
+	<authorUrl>http://joomladds.com</authorUrl>
+	<version>1.8.0</version>
+	<description><![CDATA[<link href="/plugins/system/core_login_redirect/assets/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+<div class="templateinfo">
+<h4><strong>Core Login Redirect</strong></h4>
+<p>This plugin should be renamed to 'Core Redirect' because it does so much more than redirecting the login. This is a Joomla! 2.5 plugin used to redirect logins, registrations, profiles edits and views, forgotten password and login reset requests from the Joomla Core to Community Builder, JomSocial or your own registration application. It doesn't rewrite the actual URL's, only redirects accordingly. (This plugin will allow you to redirect your registrations, logins, profile, password &amp; username resets to either Community Builder, JomSocial or a Custom Method by either selecting a menu item to redirect to, or by entering the custom URL for your registration application.)</p>
+</div>
+<div id="foot-container">
+<div id="foot-left">
+<a href="index.php?option=com_plugins&view=plugins&filter_search=core+login+redirect" title="Edit the Core Login Redirect Plugin"><img src="/plugins/system/core_login_redirect/assets/images/extension_manager.png" /></a>
+</div>
+<div id="foot-right">This Extension Proudly offered by: <a href="http://joomladds.com" target="_blank">JoomLadds.com</a>
+<br />Support: <a href="http://joomladds.com/forum/core-login-redirect.html" target="_blank">http://joomladds.com/forum/core-login-redirect.html</a>
+<!--
+<br />Tutorials: <a href="http://joomladds.com/tutorials/core-login-redirect.html" target="_blank">http://joomladds.com/tutorials/core-login-redirect.html</a>
+-->
+</div>
+</div>]]>
+	</description>
+	<files>  	
+		<filename plugin="core_login_redirect">core_login_redirect.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>fields</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_core_login_redirect.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_core_login_redirect.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/core_login_redirect/fields">
+			<fieldset name="basic">
+				<field name="basic_title1" type="titlebox" default="PLG_SYSTEM_CORE_LOGIN_REDIRECT_BASIC_TITLE1" />
+				<field name="custom_register" type="list" default="cb" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_DESC">
+					<option value="joomla">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOOMLA_OPTION</option>
+					<option value="cb">PLG_SYSTEM_CORE_LOGIN_REDIRECT_COMMUNITY_BUILDER_OPTION</option>
+					<option value="js">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMSOCIAL_OPTION</option>
+					<!--<option value="jw">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMWALL_OPTION</option>-->
+					<option value="custom">PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_OPTION</option>
+				</field>		
+				<field name="custom_register_menu" type="menuitem" disable="separator" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_MENU_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_MENU_DESC">
+					<option value="">-- Select --</option>
+				</field>
+				<field name="custom_register_url" type="text" size="30" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_URL_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_REGISTER_URL_DESC" />
+
+				<field name="basic_title2" type="titlebox" default="PLG_SYSTEM_CORE_LOGIN_REDIRECT_BASIC_TITLE2" />
+				<field name="custom_login" type="list" default="cb" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_LOGIN_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_LOGIN_DESC">
+					<option value="joomla">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOOMLA_OPTION</option>
+					<option value="cb">PLG_SYSTEM_CORE_LOGIN_REDIRECT_COMMUNITY_BUILDER_OPTION</option>
+					<option value="js">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMSOCIAL_OPTION</option>
+					<!--<option value="jw">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMWALL_OPTION</option>-->
+					<option value="custom">PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_OPTION</option>
+				</field>		
+				<field name="custom_login_menu" type="menuitem" disable="separator" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_LOGIN_MENU_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_LOGIN_MENU_DESC">
+					<option value="">-- Select --</option>
+				</field>
+
+				<field name="basic_title3" type="titlebox" default="PLG_SYSTEM_CORE_LOGIN_REDIRECT_BASIC_TITLE3" />
+				<field name="custom_profile" type="list" default="cb" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_DESC">
+					<option value="joomla">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOOMLA_OPTION</option>
+					<option value="cb">PLG_SYSTEM_CORE_LOGIN_REDIRECT_COMMUNITY_BUILDER_OPTION</option>
+					<option value="js">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMSOCIAL_OPTION</option>
+					<!--<option value="jw">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOMWALL_OPTION</option>-->
+					<option value="custom">PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_OPTION</option>
+				</field>		
+				<field name="custom_profile_menu" type="menuitem" disable="separator" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_MENU_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_MENU_DESC">
+					<option value="">-- Select --</option>
+				</field>
+				<field name="custom_profile_url" type="text" size="30" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_URL_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PROFILE_URL_DESC" />
+
+				<field name="basic_title4" type="titlebox" default="PLG_SYSTEM_CORE_LOGIN_REDIRECT_BASIC_TITLE4" />
+				<field name="custom_password" type="list" default="cb" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_DESC">
+					<option value="joomla">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOOMLA_OPTION</option>
+					<option value="cb">PLG_SYSTEM_CORE_LOGIN_REDIRECT_COMMUNITY_BUILDER_OPTION</option>
+					<option value="custom">PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_OPTION</option>
+				</field>		
+				<field name="custom_password_menu" type="menuitem" disable="separator" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_MENU_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_MENU_DESC">
+					<option value="">-- Select --</option>
+				</field>
+				<field name="custom_password_url" type="text" size="30" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_URL_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_PASSWORD_URL_DESC" />
+
+				<field name="basic_title5" type="titlebox" default="PLG_SYSTEM_CORE_LOGIN_REDIRECT_BASIC_TITLE5" />
+				<field name="custom_username" type="list" default="cb" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_DESC">
+					<option value="joomla">PLG_SYSTEM_CORE_LOGIN_REDIRECT_JOOMLA_OPTION</option>
+					<option value="cb">PLG_SYSTEM_CORE_LOGIN_REDIRECT_COMMUNITY_BUILDER_OPTION</option>
+					<option value="custom">PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_OPTION</option>
+				</field>		
+				<field name="custom_username_menu" type="menuitem" disable="separator" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_MENU_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_MENU_DESC">
+					<option value="">-- Select --</option>
+				</field>
+				<field name="custom_username_url" type="text" size="30" default="" label="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_URL_LABEL" description="PLG_SYSTEM_CORE_LOGIN_REDIRECT_CUSTOM_USERNAME_URL_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="dev_mode"
+					type="list"
+					default="0"
+					label="Enable Dev Mode?"
+					description="Enable if you need to test this module.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Core Login Redirect Plugin Update Site">http://update.joomladds.com/plg_core_login_redirect-update.xml</server>
+	</updateservers>
+</extension>
