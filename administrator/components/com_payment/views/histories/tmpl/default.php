@@ -113,8 +113,9 @@ $saveOrder = $listOrder == 'a.ordering';
                             <?php echo JHtml::_('jgrid.checkedout', $i, $item->editor, $item->checked_out_time, 'customers.', $canCheckin); ?>
                         <?php endif; ?>
                         <?php if ($canEdit) : ?>
-                            <a href="<?php echo JRoute::_('index.php?option=com_payment&task=customer.edit&layout=preview&id=' . (int) $item->id); ?>">
-                                <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?></a>
+                            <!--<a href="<?php echo JRoute::_('index.php?option=com_payment&task=customer.edit&layout=preview&id=' . (int) $item->id); ?>">-->
+                                <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?>
+                            <!--</a>-->
                         <?php else : ?>
                             <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?>
                         <?php endif; ?>

@@ -114,7 +114,8 @@ $saveOrder = $listOrder == 'a.ordering';
                         <?php endif; ?>
                         <?php if ($canEdit) : ?>
                             <a href="<?php echo JRoute::_('index.php?option=com_payment&task=customer.edit&layout=preview&id=' . (int) $item->id); ?>">
-                                <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?></a>
+                                <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?>
+                            </a>
                         <?php else : ?>
                             <?php echo $this->escape($item->first_name) . " " . $this->escape($item->last_name); ?>
                         <?php endif; ?>
