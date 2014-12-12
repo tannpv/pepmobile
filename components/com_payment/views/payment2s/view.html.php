@@ -49,7 +49,8 @@ class PaymentViewPayment2s extends JView {
         //////////////////////////////////////////////////////////////////////
         $model = new PaymentModelPayment2s();
         $data = $model->specialprice();
-        $bussniess_categories =$model->getBusinessCategories();
+//        $bussniess_categories =$model->getBusinessCategories();
+        $bussniess_categories =array();
         $this->assignRef("bussniess_categories", $bussniess_categories);
         $this->assignRef('specialprices', $data);
         /////////////////////////////////////////////////////////////////////

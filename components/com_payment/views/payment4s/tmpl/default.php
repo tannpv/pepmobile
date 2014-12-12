@@ -31,29 +31,29 @@ $config = JFactory::getConfig();
         }
 
     }
-    $(document).ready(function() {
-        $('input').blur(function() {
-           
+    $(document).ready(function () {
+        $('input').blur(function () {
+
             var value = $.trim($(this).val());
             $(this).val(value);
         });
 
 
-        $("#checkout_form").submit(function(event) {
-            $('input').each(function() {
+        $("#checkout_form").submit(function (event) {
+            $('input').each(function () {
                 var value = $.trim($(this).val());
                 $(this).val(value);
             })
-            $('#x_card_num').trigger("keyup", function() {
+            $('#x_card_num').trigger("keyup", function () {
             });
         });
 
         setPaymentSection();
-        $("#pay_later").click(function() {
+        $("#pay_later").click(function () {
             setPaymentSection();
         });
 
-        $("input[name=info]").change(function() {
+        $("input[name=info]").change(function () {
             if (this.checked) {
                 $("input[name=x_first_name]").val($("input[name=firstname1]").val());
                 $("input[name=x_last_name]").val($("input[name=lastname1]").val());
@@ -72,22 +72,22 @@ $config = JFactory::getConfig();
                 $("#email").val("");
             }
         });
-        $("#name").change(function() {
+        $("#name").change(function () {
             //  upateCompanyName();
             updateTotal1();
             updateTotal2();
         });
-        $("#company").change(function() {
+        $("#company").change(function () {
             updateTotal1();
             updateTotal2();
         });
-        $("select[name=options1]").change(function() {
+        $("select[name=options1]").change(function () {
             $("#addinput1").empty();
             updateTotal1();
             //sum total
             calTotal();
         });
-        $("select[name=options2]").change(function() {
+        $("select[name=options2]").change(function () {
             $("#addinput2").empty();
             updateTotal2();
             calTotal();
@@ -95,7 +95,7 @@ $config = JFactory::getConfig();
         updateTotal1();
         updateTotal2();
         $.validator.addMethod("checkSelected",
-                function(value, element) {
+                function (value, element) {
                     if ($("#persons1  option:selected").val() == 0 && $("#persons2  option:selected").val() == 0) {
                         return false;
                     }
@@ -135,7 +135,7 @@ $config = JFactory::getConfig();
         var newTotal4add_field = 0;
         var newTotal1 = 0;
         var price = $('#member-price').val();
-        $("select[name=options1] option:selected").each(function() {
+        $("select[name=options1] option:selected").each(function () {
             newTotal4add_field = parseFloat($(this).data("value"));
             newTotal1 = parseFloat($(this).data("value")) * price;
         });
@@ -146,7 +146,7 @@ $config = JFactory::getConfig();
             var displayCount = varCount;
             $node += '<p><label for="pers' + displayCount + '">' + displayCount + ' : Name : </label><input type="text" class ="text required" name="member[' + displayCount + '][name]" id="num' + displayCount + '"><label for="pers_company' + displayCount + '">Company: </label><input type="text" class ="text required" name="member[' + displayCount + '][company]" id="mem_company' + displayCount + '"></p>';
             //remove a textfield
-            $('#addinput1').on('click', '.removeVar', function() {
+            $('#addinput1').on('click', '.removeVar', function () {
                 $(this).parent().remove();
             });
         }
@@ -158,7 +158,7 @@ $config = JFactory::getConfig();
         var newTotal4add_field = 0;
         var newTotal2 = 0;
         var price = $('#non-member-price').val();
-        $("select[name=options2] option:selected").each(function() {
+        $("select[name=options2] option:selected").each(function () {
             newTotal4add_field = parseFloat($(this).data("value"));
             newTotal2 = parseFloat($(this).data("value")) * price;
         });
@@ -169,7 +169,7 @@ $config = JFactory::getConfig();
             var displayCount = varCount;
             $node += '<p><label for="pers' + displayCount + '">' + displayCount + ' : Name : </label><input type="text" class = "text required" class ="text required"name="non_mem[' + displayCount + '][name]" id="non_mem' + displayCount + '"><label for="pers_company' + displayCount + '">Company: </label><input type="text" class = "text required" name="non_mem[' + displayCount + '][company]" id="pers_company' + displayCount + '"></p>';
             //remove a textfield
-            $('#addinput2').on('click', '.removeVar', function() {
+            $('#addinput2').on('click', '.removeVar', function () {
                 $(this).parent().remove();
             });
         }
@@ -193,7 +193,7 @@ $config = JFactory::getConfig();
             <section id="contact">
 
              <!--   <img src="images/logo.png" alt="Logo Pepmobile" style="display: block;margin-left: auto; margin-right: auto"/>-->
-              <h2 align="center">
+                <h2 align="center">
                     <abbr title="HyperText Markup Language">14th Annual Industrial Reverse Trade Show</abbr><br>
                     <abbr title="HyperText Markup Language">Thursday, October 16, 2014</abbr><br>
                     <abbr title="HyperText Markup Language">VIP Early Admission 12:00 – 1:00</abbr><br>
@@ -255,49 +255,27 @@ $config = JFactory::getConfig();
                     </fieldset>
 
 
+                    <?php if (count($this->bussniess_categories)): ?>
+                        <fieldset>
 
-                    <fieldset>
+                            <legend>Business Category</legend>
+                            <div>
+                                By selecting one of the following categories, your name, company name and phone number will be listed under selected category in our Trade Show publication in the Product & Service Provider Directory.
 
-                        <legend>Business Category</legend>
-                        <div>
-                            By selecting one of the following categories, your name, company name and phone number will be listed under selected category in our Trade Show publication in the Product & Service Provider Directory.
+                            </div>
+                            <div class="bc">
+                                <ul>
+                                    <?php foreach ($this->bussniess_categories as $business): ?>
+                                        <li><label ><?php echo $business->name ?></label><input type="radio" value="<?php echo $business->name ?>" name="pay" class="required" ></li>
+                                    <?php endforeach; ?>
 
-                        </div>
-                        <div class="bc">
-                            <ul>
-                                <?php foreach ($this->bussniess_categories as $business): ?>
-                                    <li><label ><?php echo $business->name ?></label><input type="radio" value="<?php echo $business->name ?>" name="pay" class="required" ></li>
-<?php endforeach; ?>
-<!--                                <li><label>Communication</label><input type="radio" value="Communication" name="pay" class="required"></li>
-                    <li><label>Containment Rental/Storage</label><input type="radio" value="Containment Rental/Storage" name="pay"></li>
-                    <li><label>Contractors/Construction</label><input type="radio" value="Contractors/Construction" name="pay"></li>
-                    <li><label>Education/Training</label><input type="radio" value="Education/Training" name="pay"></li>
-                    <li><label>Electric Contractors/Distributors</label><input type="radio" value="Electric Contractors/Distributors" name="pay"></li>
-                    <li><label>Emergency Support/Response</label><input type="radio" value="Emergency Support/Response" name="pay"></li>
-                    <li><label>Employment Services</label><input type="radio" value="Employment Services" name="pay"></li>
-                    <li><label>Energy</label><input type="radio" value="Energy" name="pay"></li>
-                    <li><label>Engineering/Consulting</label><input type="radio" value="Engineering/Consulting" name="pay"></li>
-                    <li><label>Financial</label><input type="radio" name="pay" value="Financial"></li>
-                    <li><label>Hotel/Corporate Housing</label><input type="radio" value="Hotel/Corporate Housing" name="pay"></li>
-                    <li><label>Industrial Equip/Supplies/Svcs</label><input type="radio" value="Industrial Equip/Supplies/Svcs" name="pay"></li>
-                    <li><label>Industrial Healthcare</label><input type="radio" value="Industrial Healthcare" name="pay"></li>
-                    <li><label>Insurance/Claims Services</label><input type="radio" value="Insurance/Claims Services" name="pay"></li>
-                    <li><label>Laboratories/Testing</label><input type="radio" value="Laboratories/Testing" name="pay"></li>
-                    <li><label>Legal</label><input type="radio" value="Legal" name="pay"></li>
-                    <li><label>Marine Services/Supply</label><input type="radio" value="Marine Services/Supply" name="pay"></li>
-                    <li><label>Oil Reclamation/Wastes</label><input type="radio" value="Oil Reclamation/Wastes" name="pay"></li>
-                    <li><label>Office Equipment/Supplies</label><input type="radio" value="Office Equipment/Supplies" name="pay"></li>
-                    <li><label>Public Relations/Marketing</label><input type="radio" value="Public Relations/Marketing" name="pay"></li>
-                    <li><label>Pumps/Valves/Welding</label><input type="radio" value="Pumps/Valves/Welding" name="pay"></li>
-                    <li><label>Safety Equip/Supplies/Training</label><input type="radio" value="Safety Equip/Supplies/Training" name="pay"></li>
-                    <li><label>Trucking/Hauling/Transportation</label><input type="radio" value="Trucking/Hauling/Transportation" name="pay"> </li>-->
-                                <li><label>I do not wish to appear in the Directory</label><input type="radio" value="Others" name="pay"/>		</li>
+                                    <li><label>I do not wish to appear in the Directory</label><input type="radio" value="Others" name="pay"/>		</li>
 
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
 
-                    </fieldset>
-
+                        </fieldset>
+                    <?php endif; ?>
                     <fieldset>
 
                         <legend>Purchase Tickets</legend>
@@ -329,7 +307,7 @@ $config = JFactory::getConfig();
                                         }
                                         ?>><?php echo $number; ?></option>
 
-<?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 
@@ -360,7 +338,7 @@ $config = JFactory::getConfig();
                                         }
                                         ?>><?php echo $number; ?></option>
 
-<?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 
@@ -430,9 +408,9 @@ $config = JFactory::getConfig();
                                     <li class="card_visa">Visa</li>
                                     <li class="card_mastercard">Mastercard</li>
                                     <li class="card_amex">American Express</li>
-                                                                   <li class="card_discover">Discover</li>
-                                                                      <!--       <li class="card_jcb">JCB</li>
-                                                                        <li class="card_diners">Diners Club</li>-->
+                                    <li class="card_discover">Discover</li>
+                                    <!--       <li class="card_jcb">JCB</li>
+                                      <li class="card_diners">Diners Club</li>-->
                                 </ul>
                                 <input type="hidden" name="x_card_type" id="x_card_type"/>
                             </div>
@@ -461,7 +439,7 @@ $config = JFactory::getConfig();
                         echo '<input type="button" readonly="readonly" class="submit_lock buy" value="Purchase">';
                     }
                     ?>
-<?php echo JHtml::_('form.token'); ?>
+                    <?php echo JHtml::_('form.token'); ?>
                     <input type="hidden"  name="nameofpayment" value="Reverse Trade" />
                     <input type="hidden" name="option" value="com_payment" />
                     <input type="hidden" name="task" value="payment4s.submit" />

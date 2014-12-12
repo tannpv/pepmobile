@@ -28,7 +28,7 @@ defined('_JEXEC') or die;
         }, "Please select the folowing options for specify a new one!");
 
         $("#checkout_form").validate({
-          //  errorElement: "span",
+            //  errorElement: "span",
             errorPlacement: function (error, element) {
                 error.insertAfter(element);
             }
@@ -149,8 +149,7 @@ defined('_JEXEC') or die;
                         </div>
                     </fieldset>				
 
-
-
+                   <?php if(count($this->bussniess_categories)):?>
                     <fieldset>
 
                         <legend>Business Category</legend>
@@ -163,35 +162,14 @@ defined('_JEXEC') or die;
                                 <?php foreach ($this->bussniess_categories as $business): ?>
                                     <li><label ><?php echo $business->name ?></label><input type="radio" value="<?php echo $business->name ?>" name="pay" class="required" ></li>
                                 <?php endforeach; ?>
-<!--                                <li><label >Communication</label><input type="radio" value="Communication" name="pay" class="required" ></li>
-<li><label>Containment Rental/Storage</label><input type="radio" value="Containment Rental/Storage" name="pay"></li>
-<li><label>Contractors/Construction</label><input type="radio" value="Contractors/Construction" name="pay"></li>
-<li><label>Education/Training</label><input type="radio" value="Education/Training" name="pay"></li>
-<li><label>Electric Contractors/Distributors</label><input type="radio" value="Electric Contractors/Distributors" name="pay"></li>
-<li><label>Emergency Support/Response</label><input type="radio" value="Emergency Support/Response" name="pay"></li>
-<li><label>Employment Services</label><input type="radio" value="Employment Services" name="pay"></li>
-<li><label>Energy</label><input type="radio" value="Energy" name="pay"></li>
-<li><label>Engineering/Consulting</label><input type="radio" value="Engineering/Consulting" name="pay"/></li>
-<li><label>Financial</label><input type="radio" name="pay" value="Financial"/></li>
-<li><label>Hotel/Corporate Housing</label><input type="radio" value="Hotel/Corporate Housing" name="pay"/></li>
-<li><label>Industrial Equip/Supplies/Svcs</label><input type="radio" value="Industrial Equip/Supplies/Svcs" name="pay"></li>
-<li><label>Industrial Healthcare</label><input type="radio" value="Industrial Healthcare" name="pay"></li>
-<li><label>Insurance/Claims Services</label><input type="radio" value="Insurance/Claims Services" name="pay"></li>
-<li><label>Laboratories/Testing</label><input type="radio" value="Laboratories/Testing" name="pay"></li>
-<li><label>Legal</label><input type="radio" value="Legal" name="pay"></li>
-<li><label>Marine Services/Supply</label><input type="radio" value="Marine Services/Supply" name="pay"></li>
-<li><label>Oil Reclamation/Wastes</label><input type="radio" value="Oil Reclamation/Wastes" name="pay"></li>
-<li><label>Office Equipment/Supplies</label><input type="radio" value="Office Equipment/Supplies" name="pay"></li>
-<li><label>Public Relations/Marketing</label><input type="radio" value="Public Relations/Marketing" name="pay"></li>
-<li><label>Pumps/Valves/Welding</label><input type="radio" value="Pumps/Valves/Welding" name="pay"></li>
-<li><label>Safety Equip/Supplies/Training</label><input type="radio" value="Safety Equip/Supplies/Training" name="pay"></li>
-<li><label>Trucking/Hauling/Transportation</label><input type="radio" value="Trucking/Hauling/Transportation" name="pay"> </li>-->
+
                                 <li><label>I do not wish to appear in the Directory</label><input type="radio" value="Others" name="pay"/>	</li>
 
                             </ul>
                         </div>
 
                     </fieldset>
+                    <?php endif;?>
                     <fieldset>
                         <div>
                             Let us know how you heard about the show
